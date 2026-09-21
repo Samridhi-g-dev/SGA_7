@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIT Canteen | Neon Blue & Pink Menu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Outfit for futuristic headings & Plus Jakarta Sans for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        neon: {
+                            darkbg: '#0B0F19',
+                            cardbg: '#111827',
+                            bordergb: '#1F2937',
+                            blue: '#38BDF8',
+                            pink: '#EC4899',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #E2E8F0;
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen relative overflow-x-hidden selection:bg-pink-500 selection:text-white">
+
+    <!-- Ambient Neon Background Glow Blobs -->
+    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-sky-500/10 blur-[140px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-pink-500/10 blur-[140px] rounded-full pointer-events-none"></div>
+
+    <!-- Header Section -->
+    <header class="relative z-10 max-w-6xl mx-auto px-6 pt-16 pb-12 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-pink-500/30 bg-gradient-to-r from-sky-500/10 to-pink-500/10 text-pink-300 text-xs font-semibold tracking-widest uppercase mb-6 shadow-inner">
+            ⚡ Cyber & Campus Dining Experience
+        </div>
+        <h1 class="text-5xl md:text-7xl font-heading font-extrabold text-white tracking-tight mb-4">
+            The <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-purple-400 to-pink-500">SIT Canteen</span>
+        </h1>
+        <p class="text-slate-400 max-w-xl mx-auto text-sm md:text-base font-light tracking-wide mb-8">
+            Vibrant flavors, electrifying street bites, and wholesome meals prepared fresh with hygiene and passion for the elite SIT community.
+        </p>
+
+        <!-- Status & Hours Bar -->
+        <div class="inline-flex flex-wrap items-center justify-center gap-4 bg-neon-cardbg/80 border border-neon-bordergb px-6 py-3 rounded-2xl shadow-xl backdrop-blur-md">
+            <div class="flex items-center gap-2">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span class="text-xs font-semibold text-emerald-400 tracking-wider uppercase">Kitchen Open</span>
+            </div>
+            <div class="w-px h-4 bg-slate-700 hidden sm:block"></div>
+            <span class="text-xs text-slate-300 font-medium">🕒 Hours: 8:00 AM – 6:00 PM</span>
+            <div class="w-px h-4 bg-slate-700 hidden sm:block"></div>
+            <span class="text-xs text-sky-400 font-medium">💳 UPI / Cash Accepted</span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="relative z-10 max-w-6xl mx-auto px-6 pb-20 space-y-16">
+
+        <!-- Special Banner -->
+        <div class="relative overflow-hidden rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/40 via-slate-900 to-pink-950/40 p-8 shadow-2xl">
+            <div class="absolute right-0 top-0 translate-x-1/4 -translate-y-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center lg:text-left">
+                    <span class="text-sky-400 font-semibold text-xs uppercase tracking-widest">Neon Special Combo</span>
+                    <h2 class="text-2xl md:text-3xl font-heading font-bold text-white">The Cyber Morning Meal</h2>
+                    <p class="text-slate-400 text-sm">Crispy Golden Masala Dosa paired with authentic South Indian Filter Coffee.</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="text-right">
+                        <span class="block text-xs text-slate-500 line-through">₹95</span>
+                        <span class="text-3xl font-heading font-bold text-pink-400">₹70</span>
+                    </div>
+                    <span class="bg-gradient-to-r from-sky-400 to-pink-500 text-black text-xs font-extrabold px-4 py-2.5 rounded-xl uppercase tracking-wider shadow-lg">Special Offer</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Categories Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Category 1: Breakfast -->
+            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
+                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
+                    <div>
+                        <span class="text-2xl mb-1 block">🥞</span>
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Breakfast & Tiffin</h3>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">8AM - 11AM</span>
+                </div>
+                <div class="space-y-6">
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Plain / Masala Dosa</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹45 / ₹60</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Served steaming hot with authentic sambar & coconut chutney</p>
+                    </div>
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Idli Vada Combo</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹40</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">2 extraordinarily soft idlis & 1 crispy golden medu vada</p>
+                    </div>
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Poha / Upma</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹30</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Traditional morning delicacy garnished with crunchy sev</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Lunch & Meals -->
+            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
+                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
+                    <div>
+                        <span class="text-2xl mb-1 block">🍛</span>
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Lunch & Thalis</h3>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">12PM - 3PM</span>
+                </div>
+                <div class="space-y-6">
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">SIT Special Thali</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹90</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Roti, dal tadka, 2 sabzi, steamed rice, salad & sweet</p>
+                    </div>
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Mini Rice Plate</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹60</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Comforting dal rice paired with chef's dry sabzi</p>
+                    </div>
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Rajma / Chole Bowl</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹70</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Rich, aromatic gravy bowl served with seasoned rice</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Fast Food & Snacks -->
+            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
+                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
+                    <div>
+                        <span class="text-2xl mb-1 block">🍔</span>
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Fast Food & Snacks</h3>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">All Day</span>
+                </div>
+                <div class="space-y-6">
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Veg Cheese Burger</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹60</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Crunchy cutlet layered with melted cheese and crisp lettuce</p>
+                    </div>
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Peri Peri Fries</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹50</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Golden fries tossed in signature fiery spice seasoning</p>
+                    </div>
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Grilled Cheese Sandwich</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹45</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Loaded with garden-fresh veggies and herb butter</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: Chaat Corner -->
+            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
+                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
+                    <div>
+                        <span class="text-2xl mb-1 block">✨</span>
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Chaat Corner</h3>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">4PM Onwards</span>
+                </div>
+                <div class="space-y-6">
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Samosa / Vada Pav</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹20</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">The iconic campus snack served with spicy green chutney</p>
+                    </div>
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Sev Puri / Bhel Puri</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹40</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Tangy, crunchy street-style chaat masterclass</p>
+                    </div>
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Maggi (Plain / Cheese)</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹30 / ₹45</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">The timeless midnight & evening comfort elixir</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 5: Beverages -->
+            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
+                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
+                    <div>
+                        <span class="text-2xl mb-1 block">☕</span>
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Elixirs & Brews</h3>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">All Day</span>
+                </div>
+                <div class="space-y-6">
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Hot Chai / Coffee</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹15</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Freshly brewed aromatic pick-me-up</p>
+                    </div>
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Cold Coffee w/ Ice Cream</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹60</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Rich, velvety, and chilled to perfection</p>
+                    </div>
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Fresh Lime Soda</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹35</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Refreshing burst of citrus (Sweet, Salted or Mixed)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 6: Desserts -->
+            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
+                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
+                    <div>
+                        <span class="text-2xl mb-1 block">🍨</span>
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Sweet Endings</h3>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">Cravings</span>
+                </div>
+                <div class="space-y-6">
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Ice Cream Scoop</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹35</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Choice of Vanilla, Chocolate, or Butterscotch</p>
+                    </div>
+                    <div class="group/item">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Gulab Jamun (2 pcs)</span>
+                            <span class="text-sky-400 font-semibold text-sm">₹30</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light">Warm, melt-in-the-mouth syrupy golden spheres</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 max-w-6xl mx-auto px-6 py-10 border-t border-neon-bordergb text-center space-y-2">
+        <p class="text-xs text-slate-400 font-medium">Managed with excellence by the SIT Canteen Committee</p>
+        <p class="text-[11px] text-slate-600">Designed for the SIT Campus • All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
