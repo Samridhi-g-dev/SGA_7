@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIT Canteen | Neon Blue & Pink Menu</title>
+    <title>SIT Canteen | The Chaotic GPA Saver & Survival Hub</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Outfit for futuristic headings & Plus Jakarta Sans for body -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Comic / Playful vibe (Bungee & Fredoka) -->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        heading: ['Outfit', 'sans-serif'],
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Bungee', 'cursive'],
+                        sans: ['Fredoka', 'sans-serif'],
                     },
                     colors: {
-                        neon: {
-                            darkbg: '#0B0F19',
-                            cardbg: '#111827',
-                            bordergb: '#1F2937',
-                            blue: '#38BDF8',
-                            pink: '#EC4899',
+                        goofy: {
+                            yellow: '#FFEE00',
+                            pink: '#FF007F',
+                            cyan: '#00F0FF',
+                            lime: '#39FF14',
+                            purple: '#9D00FF',
+                            dark: '#121212',
+                            card: '#FFFDF0',
+                            border: '#111111'
                         }
                     }
                 }
@@ -31,63 +34,118 @@
     </script>
     <style>
         body {
-            background-color: #0B0F19;
-            color: #E2E8F0;
+            background-color: #FFEE00;
+            background-image: radial-gradient(#000000 1.5px, transparent 1.5px), radial-gradient(#000000 1.5px, #FFEE00 1.5px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            color: #121212;
+        }
+        .brutal-shadow {
+            box-shadow: 5px 5px 0px #000000;
+        }
+        .brutal-shadow-sm {
+            box-shadow: 3px 3px 0px #000000;
+        }
+        .brutal-card {
+            background: #ffffff;
+            border: 3px solid #000000;
+            box-shadow: 6px 6px 0px #000000;
+            transition: all 0.1s ease;
+        }
+        .brutal-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 9px 9px 0px #000000;
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+        .animate-wiggle {
+            animation: wiggle 0.6s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: float 2.5s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="font-sans min-h-screen relative overflow-x-hidden selection:bg-pink-500 selection:text-white">
+<body class="font-sans min-h-screen pb-24 select-none">
 
-    <!-- Ambient Neon Background Glow Blobs -->
-    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-sky-500/10 blur-[140px] rounded-full pointer-events-none"></div>
-    <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-pink-500/10 blur-[140px] rounded-full pointer-events-none"></div>
+    <!-- Chaotic Announcement Bar -->
+    <div class="bg-goofy-pink text-white font-heading text-xs md:text-sm py-2 px-4 border-b-4 border-black overflow-hidden whitespace-nowrap shadow-md">
+        <div class="inline-block animate-[marquee_15s_linear_infinite]">
+            🚨 EMERGENCY NOTICE: Mess food served dal that looked sentient today! • Canteen is your only sanctuary! • Free emotional support provided by Uncle behind the counter (Terms & Conditions apply) • Don't ask about the secret ingredient in the Samosa! 🚨
+        </div>
+    </div>
 
     <!-- Header Section -->
-    <header class="relative z-10 max-w-6xl mx-auto px-6 pt-16 pb-12 text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-pink-500/30 bg-gradient-to-r from-sky-500/10 to-pink-500/10 text-pink-300 text-xs font-semibold tracking-widest uppercase mb-6 shadow-inner">
-            ⚡ Cyber & Campus Dining Experience
+    <header class="max-w-6xl mx-auto px-4 pt-10 pb-8 text-center">
+        <!-- Sticker Badge -->
+        <div class="inline-block bg-goofy-cyan border-3 border-black px-5 py-2 rounded-full font-heading text-xs md:text-sm uppercase tracking-wider brutal-shadow-sm rotate-[-2deg] mb-4 animate-wiggle">
+            🔥 APPROVED BY 99.8% SLEEP-DEPRIVED ENGINEERS 🔥
         </div>
-        <h1 class="text-5xl md:text-7xl font-heading font-extrabold text-white tracking-tight mb-4">
-            The <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-purple-400 to-pink-500">SIT Canteen</span>
+        
+        <h1 class="text-5xl md:text-8xl font-heading uppercase tracking-tight mb-3 text-white drop-shadow-[4px_4px_0px_#000]">
+            SIT <span class="text-goofy-pink drop-shadow-[4px_4px_0px_#000]">CANTEEN</span>
         </h1>
-        <p class="text-slate-400 max-w-xl mx-auto text-sm md:text-base font-light tracking-wide mb-8">
-            Vibrant flavors, electrifying street bites, and wholesome meals prepared fresh with hygiene and passion for the elite SIT community.
+        
+        <p class="font-bold text-base md:text-xl bg-white border-3 border-black inline-block px-6 py-2 rounded-2xl brutal-shadow rotate-[1deg] max-w-2xl mx-auto mb-8">
+            ⚠️ Warning: Consuming our Peri Peri Fries may cause sudden attendance in 8 AM lectures (or total regret).
         </p>
 
-        <!-- Status & Hours Bar -->
-        <div class="inline-flex flex-wrap items-center justify-center gap-4 bg-neon-cardbg/80 border border-neon-bordergb px-6 py-3 rounded-2xl shadow-xl backdrop-blur-md">
-            <div class="flex items-center gap-2">
-                <span class="relative flex h-2.5 w-2.5">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                </span>
-                <span class="text-xs font-semibold text-emerald-400 tracking-wider uppercase">Kitchen Open</span>
+        <!-- Status & Stats Bar -->
+        <div class="flex flex-wrap items-center justify-center gap-4 bg-white border-3 border-black p-4 rounded-2xl brutal-shadow max-w-3xl mx-auto">
+            <div class="flex items-center gap-2 bg-goofy-lime px-3 py-1 rounded-lg border-2 border-black font-bold text-xs uppercase">
+                <span class="h-3 w-3 rounded-full bg-black animate-ping"></span>
+                Kitchen Open & Panicking
             </div>
-            <div class="w-px h-4 bg-slate-700 hidden sm:block"></div>
-            <span class="text-xs text-slate-300 font-medium">🕒 Hours: 8:00 AM – 6:00 PM</span>
-            <div class="w-px h-4 bg-slate-700 hidden sm:block"></div>
-            <span class="text-xs text-sky-400 font-medium">💳 UPI / Cash Accepted</span>
+            <div class="hidden sm:block font-bold">|</div>
+            <span class="text-xs md:text-sm font-bold">🕒 8:00 AM – 6:00 PM (Or until Uncle runs out of patience)</span>
+            <div class="hidden sm:block font-bold">|</div>
+            <span class="text-xs md:text-sm font-bold bg-goofy-yellow px-2 py-0.5 rounded border border-black">💳 Uncle's PhonePe / Loose Change</span>
         </div>
     </header>
 
-    <!-- Main Container -->
-    <main class="relative z-10 max-w-6xl mx-auto px-6 pb-20 space-y-16">
-
-        <!-- Special Banner -->
-        <div class="relative overflow-hidden rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/40 via-slate-900 to-pink-950/40 p-8 shadow-2xl">
-            <div class="absolute right-0 top-0 translate-x-1/4 -translate-y-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
-                <div class="space-y-2 text-center lg:text-left">
-                    <span class="text-sky-400 font-semibold text-xs uppercase tracking-widest">Neon Special Combo</span>
-                    <h2 class="text-2xl md:text-3xl font-heading font-bold text-white">The Cyber Morning Meal</h2>
-                    <p class="text-slate-400 text-sm">Crispy Golden Masala Dosa paired with authentic South Indian Filter Coffee.</p>
+    <!-- Interactive Broke Student Food Picker -->
+    <section class="max-w-4xl mx-auto px-4 mb-14">
+        <div class="brutal-card bg-goofy-purple text-white p-6 md:p-8 rounded-3xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 text-8xl opacity-20 pointer-events-none">🎲</div>
+            <div class="relative z-10 text-center space-y-4">
+                <span class="bg-goofy-yellow text-black font-heading text-xs px-3 py-1 rounded-full border-2 border-black uppercase">Stuck in a Crisis?</span>
+                <h2 class="text-2xl md:text-4xl font-heading tracking-wide">WHAT SHOULD I EAT WHEN BROKE?</h2>
+                <p class="text-purple-100 text-sm md:text-base max-w-xl mx-auto font-medium">
+                    Too broke for Swiggy? Too lazy to walk outside campus? Let the Canteen Oracle decide your fate based on your remaining wallet balance!
+                </p>
+                <div class="pt-2">
+                    <button onclick="pickRandomFood()" class="bg-goofy-yellow text-black font-heading text-sm md:text-base px-8 py-4 rounded-2xl border-3 border-black brutal-shadow active:translate-y-1 hover:bg-goofy-cyan transition-all cursor-pointer">
+                        🎰 SPIN THE CANTEEN ROULETTE!
+                    </button>
                 </div>
-                <div class="flex items-center gap-4">
+                <div id="roulette-result" class="hidden mt-4 p-4 bg-white text-black font-bold border-3 border-black rounded-xl text-lg animate-bounce">
+                    <!-- Dynamic result inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Banner -->
+    <main class="relative max-w-6xl mx-auto px-4 space-y-12">
+        <div class="brutal-card bg-goofy-cyan rounded-3xl p-6 md:p-8 relative overflow-hidden transform rotate-[-1deg]">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center lg:text-left">
+                    <span class="bg-black text-goofy-yellow font-heading text-xs px-3 py-1 rounded-full uppercase">🚨 Ultimate Survival Combo</span>
+                    <h3 class="text-3xl font-heading text-black">THE CYBER MORNING LIFE-SAVER</h3>
+                    <p class="text-slate-900 font-semibold text-sm">Crispy Dosa + South Indian Filter Coffee. Guaranteed to revive zombies after a 2 AM assignment grind.</p>
+                </div>
+                <div class="flex items-center gap-6 bg-white border-3 border-black px-6 py-4 rounded-2xl brutal-shadow-sm">
                     <div class="text-right">
-                        <span class="block text-xs text-slate-500 line-through">₹95</span>
-                        <span class="text-3xl font-heading font-bold text-pink-400">₹70</span>
+                        <span class="block text-xs text-red-600 font-bold line-through">₹95 (Actual Pain)</span>
+                        <span class="text-3xl font-heading text-goofy-pink">₹70</span>
                     </div>
-                    <span class="bg-gradient-to-r from-sky-400 to-pink-500 text-black text-xs font-extrabold px-4 py-2.5 rounded-xl uppercase tracking-wider shadow-lg">Special Offer</span>
+                    <span class="bg-goofy-lime text-black font-heading text-xs px-4 py-3 rounded-xl border-2 border-black uppercase animate-wiggle">BEST DEAL</span>
                 </div>
             </div>
         </div>
@@ -96,198 +154,227 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <!-- Category 1: Breakfast -->
-            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
-                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
-                    <div>
-                        <span class="text-2xl mb-1 block">🥞</span>
-                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Breakfast & Tiffin</h3>
-                    </div>
-                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">8AM - 11AM</span>
-                </div>
-                <div class="space-y-6">
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Plain / Masala Dosa</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹45 / ₹60</span>
+            <div class="brutal-card rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between pb-4 mb-6 border-b-3 border-black">
+                        <div>
+                            <span class="text-3xl mb-1 block">🥞</span>
+                            <h3 class="font-heading text-xl text-black">Breakfast & Tiffin</h3>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Served steaming hot with authentic sambar & coconut chutney</p>
+                        <span class="text-xs font-bold bg-goofy-yellow border-2 border-black px-3 py-1 rounded-full">8AM - 11AM</span>
                     </div>
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Idli Vada Combo</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹40</span>
+                    <div class="space-y-6">
+                        <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Plain / Masala Dosa</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹45 / ₹60</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Crispier than your excuses for missing morning attendance.</p>
+                            <span class="inline-block mt-1 bg-goofy-cyan text-[10px] font-bold px-2 py-0.5 rounded border border-black">⚡ GPA Saver</span>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">2 extraordinarily soft idlis & 1 crispy golden medu vada</p>
-                    </div>
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Poha / Upma</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹30</span>
+                        <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Idli Vada Combo</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹40</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">2 pillowy soft idlis & 1 golden fried danger disk.</p>
+                            <span class="inline-block mt-1 bg-goofy-lime text-[10px] font-bold px-2 py-0.5 rounded border border-black">🧠 Brain Food</span>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Traditional morning delicacy garnished with crunchy sev</p>
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Poha / Upma</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹30</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Legendary hostelite fuel topped with an avalanche of sev.</p>
+                            <span class="inline-block mt-1 bg-goofy-yellow text-[10px] font-bold px-2 py-0.5 rounded border border-black">💸 Pocket Friendly</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Category 2: Lunch & Meals -->
-            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
-                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
-                    <div>
-                        <span class="text-2xl mb-1 block">🍛</span>
-                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Lunch & Thalis</h3>
-                    </div>
-                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">12PM - 3PM</span>
-                </div>
-                <div class="space-y-6">
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">SIT Special Thali</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹90</span>
+            <div class="brutal-card rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between pb-4 mb-6 border-b-3 border-black">
+                        <div>
+                            <span class="text-3xl mb-1 block">🍛</span>
+                            <h3 class="font-heading text-xl text-black">Lunch & Thalis</h3>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Roti, dal tadka, 2 sabzi, steamed rice, salad & sweet</p>
+                        <span class="text-xs font-bold bg-goofy-yellow border-2 border-black px-3 py-1 rounded-full">12PM - 3PM</span>
                     </div>
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Mini Rice Plate</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹60</span>
+                    <div class="space-y-6">
+                        <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">SIT Special Thali</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹90</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Better than mess food (low bar, but still a masterpiece).</p>
+                            <span class="inline-block mt-1 bg-goofy-pink text-white text-[10px] font-bold px-2 py-0.5 rounded border border-black">🛡️ Anti-Homesick</span>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Comforting dal rice paired with chef's dry sabzi</p>
-                    </div>
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Rajma / Chole Bowl</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹70</span>
+                        <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Mini Rice Plate</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹60</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Dal rice therapy for when viva goes terribly wrong.</p>
+                            <span class="inline-block mt-1 bg-goofy-cyan text-[10px] font-bold px-2 py-0.5 rounded border border-black">🧘‍♂️ Comfort Zone</span>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Rich, aromatic gravy bowl served with seasoned rice</p>
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Rajma / Chole Bowl</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹70</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Guaranteed instant food coma during afternoon lectures.</p>
+                            <span class="inline-block mt-1 bg-goofy-lime text-[10px] font-bold px-2 py-0.5 rounded border border-black">😴 Nap Inducer</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Category 3: Fast Food & Snacks -->
-            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
-                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
-                    <div>
-                        <span class="text-2xl mb-1 block">🍔</span>
-                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Fast Food & Snacks</h3>
-                    </div>
-                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">All Day</span>
-                </div>
-                <div class="space-y-6">
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Veg Cheese Burger</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹60</span>
+            <div class="brutal-card rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between pb-4 mb-6 border-b-3 border-black">
+                        <div>
+                            <span class="text-3xl mb-1 block">🍔</span>
+                            <h3 class="font-heading text-xl text-black">Fast Food & Snacks</h3>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Crunchy cutlet layered with melted cheese and crisp lettuce</p>
+                        <span class="text-xs font-bold bg-goofy-yellow border-2 border-black px-3 py-1 rounded-full">All Day</span>
                     </div>
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Peri Peri Fries</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹50</span>
+                    <div class="space-y-6">
+                        <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Veg Cheese Burger</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹60</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Loaded with cheese that stretches longer than engineering semesters.</p>
+                            <span class="inline-block mt-1 bg-goofy-yellow text-[10px] font-bold px-2 py-0.5 rounded border border-black">🧀 Cheese Pull</span>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Golden fries tossed in signature fiery spice seasoning</p>
-                    </div>
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Grilled Cheese Sandwich</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹45</span>
+                        <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Peri Peri Fries</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹50</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Tossed in fiery red dust of pure existential panic.</p>
+                            <span class="inline-block mt-1 bg-goofy-pink text-white text-[10px] font-bold px-2 py-0.5 rounded border border-black">🔥 Spicy Tears</span>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Loaded with garden-fresh veggies and herb butter</p>
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Grilled Cheese Sandwich</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹45</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Crispy buttered toast hiding guilty amounts of melted dairy.</p>
+                            <span class="inline-block mt-1 bg-goofy-cyan text-[10px] font-bold px-2 py-0.5 rounded border border-black">🥪 Crumbly Bliss</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Category 4: Chaat Corner -->
-            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
-                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
-                    <div>
-                        <span class="text-2xl mb-1 block">✨</span>
-                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Chaat Corner</h3>
-                    </div>
-                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">4PM Onwards</span>
-                </div>
-                <div class="space-y-6">
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Samosa / Vada Pav</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹20</span>
+            <div class="brutal-card rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between pb-4 mb-6 border-b-3 border-black">
+                        <div>
+                            <span class="text-3xl mb-1 block">✨</span>
+                            <h3 class="font-heading text-xl text-black">Chaat Corner</h3>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">The iconic campus snack served with spicy green chutney</p>
+                        <span class="text-xs font-bold bg-goofy-yellow border-2 border-black px-3 py-1 rounded-full">4PM Onwards</span>
                     </div>
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Sev Puri / Bhel Puri</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹40</span>
+                    <div class="space-y-6">
+                        <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Samosa / Vada Pav</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹20</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">The holy grail snack keeping the entire university afloat.</p>
+                            <span class="inline-block mt-1 bg-goofy-lime text-[10px] font-bold px-2 py-0.5 rounded border border-black">👑 Campus Royalty</span>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Tangy, crunchy street-style chaat masterclass</p>
-                    </div>
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Maggi (Plain / Cheese)</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹30 / ₹45</span>
+                        <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Sev Puri / Bhel Puri</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹40</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Tangy crunch explosion that distracts you from backlogs.</p>
+                            <span class="inline-block mt-1 bg-goofy-yellow text-[10px] font-bold px-2 py-0.5 rounded border border-black">🌪️ Flavor Tornado</span>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">The timeless midnight & evening comfort elixir</p>
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Maggi (Plain / Cheese)</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹30 / ₹45</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Cooked in 2 minutes? More like devoured in 30 seconds.</p>
+                            <span class="inline-block mt-1 bg-goofy-pink text-white text-[10px] font-bold px-2 py-0.5 rounded border border-black">🌙 Midnight Savior</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Category 5: Beverages -->
-            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
-                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
-                    <div>
-                        <span class="text-2xl mb-1 block">☕</span>
-                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Elixirs & Brews</h3>
-                    </div>
-                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">All Day</span>
-                </div>
-                <div class="space-y-6">
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Hot Chai / Coffee</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹15</span>
+            <div class="brutal-card rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between pb-4 mb-6 border-b-3 border-black">
+                        <div>
+                            <span class="text-3xl mb-1 block">☕</span>
+                            <h3 class="font-heading text-xl text-black">Elixirs & Brews</h3>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Freshly brewed aromatic pick-me-up</p>
+                        <span class="text-xs font-bold bg-goofy-yellow border-2 border-black px-3 py-1 rounded-full">All Day</span>
                     </div>
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Cold Coffee w/ Ice Cream</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹60</span>
+                    <div class="space-y-6">
+                        <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Hot Chai / Coffee</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹15</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Liquid motivation powering every engineering group project.</p>
+                            <span class="inline-block mt-1 bg-goofy-cyan text-[10px] font-bold px-2 py-0.5 rounded border border-black">⚡ Mana Potion</span>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Rich, velvety, and chilled to perfection</p>
-                    </div>
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Fresh Lime Soda</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹35</span>
+                        <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Cold Coffee w/ Ice Cream</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹60</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Velvety sweetness to cope with surprise pop quizzes.</p>
+                            <span class="inline-block mt-1 bg-goofy-lime text-[10px] font-bold px-2 py-0.5 rounded border border-black">🍦 Dopamine Hit</span>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Refreshing burst of citrus (Sweet, Salted or Mixed)</p>
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Fresh Lime Soda</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹35</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Zesty electrolyte boost to recover from canteen gossip.</p>
+                            <span class="inline-block mt-1 bg-goofy-yellow text-[10px] font-bold px-2 py-0.5 rounded border border-black">🍋 Refreshment</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Category 6: Desserts -->
-            <div class="bg-neon-cardbg border border-neon-bordergb rounded-3xl p-7 shadow-xl hover:border-pink-500/50 transition-all duration-300 group">
-                <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
-                    <div>
-                        <span class="text-2xl mb-1 block">🍨</span>
-                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-sky-400 transition-colors">Sweet Endings</h3>
-                    </div>
-                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1 rounded-full">Cravings</span>
-                </div>
-                <div class="space-y-6">
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Ice Cream Scoop</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹35</span>
+            <div class="brutal-card rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between pb-4 mb-6 border-b-3 border-black">
+                        <div>
+                            <span class="text-3xl mb-1 block">🍨</span>
+                            <h3 class="font-heading text-xl text-black">Sweet Endings</h3>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Choice of Vanilla, Chocolate, or Butterscotch</p>
+                        <span class="text-xs font-bold bg-goofy-yellow border-2 border-black px-3 py-1 rounded-full">Cravings</span>
                     </div>
-                    <div class="group/item">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <span class="font-semibold text-sm text-white group-hover/item:text-pink-400 transition-colors">Gulab Jamun (2 pcs)</span>
-                            <span class="text-sky-400 font-semibold text-sm">₹30</span>
+                    <div class="space-y-6">
+                        <div class="border-b-2 border-dashed border-slate-300 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Ice Cream Scoop</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹35</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Because ice cream tastes best when someone else is paying.</p>
+                            <span class="inline-block mt-1 bg-goofy-pink text-white text-[10px] font-bold px-2 py-0.5 rounded border border-black">🍧 Chill Pill</span>
                         </div>
-                        <p class="text-xs text-slate-400 font-light">Warm, melt-in-the-mouth syrupy golden spheres</p>
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <span class="font-bold text-base text-black">Gulab Jamun (2 pcs)</span>
+                                <span class="font-heading text-goofy-pink text-sm bg-black px-2 py-0.5 rounded">₹30</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-700">Warm sugar spheres that cure all academic depression.</p>
+                            <span class="inline-block mt-1 bg-goofy-cyan text-[10px] font-bold px-2 py-0.5 rounded border border-black">🍯 Sugar Rush</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -296,11 +383,73 @@
 
     </main>
 
+    <!-- Floating Panic Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="triggerPanic()" class="bg-goofy-pink text-white font-heading px-5 py-4 rounded-full border-4 border-black brutal-shadow hover:bg-goofy-yellow hover:text-black transition-all animate-bounce cursor-pointer flex items-center gap-2 text-sm">
+            🚨 PANIC BUTTON
+        </button>
+    </div>
+
+    <!-- Panic Modal / Box -->
+    <div id="panic-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="brutal-card bg-white p-6 md:p-8 rounded-3xl max-w-md w-full text-center space-y-4">
+            <span class="text-4xl">🚨</span>
+            <h3 class="font-heading text-2xl text-black">CANTEEN EMERGENCY PROTOCOL</h3>
+            <p id="panic-text" class="text-sm font-semibold text-slate-800">
+                Take a deep breath! Uncle is brewing fresh chai right now. Do not panic about tomorrow's exam; panic about whether you have enough loose change for samosas.
+            </p>
+            <button onclick="closePanic()" class="bg-black text-goofy-yellow font-heading px-6 py-3 rounded-xl border-2 border-black hover:bg-goofy-pink hover:text-white transition-all cursor-pointer">
+                I AM READY TO FACE DEAN
+            </button>
+        </div>
+    </div>
+
     <!-- Footer -->
-    <footer class="relative z-10 max-w-6xl mx-auto px-6 py-10 border-t border-neon-bordergb text-center space-y-2">
-        <p class="text-xs text-slate-400 font-medium">Managed with excellence by the SIT Canteen Committee</p>
-        <p class="text-[11px] text-slate-600">Designed for the SIT Campus • All rights reserved.</p>
+    <footer class="max-w-6xl mx-auto px-4 mt-20 pt-8 border-t-4 border-black text-center space-y-3">
+        <p class="font-bold text-sm bg-white border-2 border-black inline-block px-4 py-1 rounded-xl brutal-shadow-sm">
+            Managed with sleep deprivation & high cholesterol by the SIT Canteen Committee 🧑‍🍳
+        </p>
+        <p class="text-xs font-semibold text-black">Designed for chaotic college survivors • All snacks subject to disappearing instantly.</p>
     </footer>
+
+    <script>
+        // Array of randomizer choices for the broke student roulette
+        const foodOptions = [
+            "⚡ Vada Pav (₹20) - The ultimate budget survivor snack!",
+            "☕ Hot Chai & Samosa (₹35) - Instant campus enlightenment!",
+            "🍜 Cheese Maggi (₹45) - Pure midnight comfort elixir!",
+            "🍟 Peri Peri Fries (₹50) - Spice up your boring lecture day!",
+            "🍛 Mini Rice Plate (₹60) - Wholesome dal-rice emotional support!"
+        ];
+
+        function pickRandomFood() {
+            const resultBox = document.getElementById('roulette-result');
+            const randomChoice = foodOptions[Math.floor(Math.random() * foodOptions.length)];
+            resultBox.innerText = randomChoice;
+            resultBox.classList.remove('hidden');
+            resultBox.classList.add('animate-wiggle');
+            setTimeout(() => {
+                resultBox.classList.remove('animate-wiggle');
+            }, 600);
+        }
+
+        function triggerPanic() {
+            const modal = document.getElementById('panic-modal');
+            const panicMessages = [
+                "Take a deep breath! Uncle is brewing fresh chai right now. Do not panic about tomorrow's exam; panic about whether you have enough loose change for samosas.",
+                "🚨 Emergency advice: If attendance is short, blame it on long canteen queues!",
+                "⚠️ Warning: Over-eating cheese burgers may lead to immediate slumber in Data Structures class.",
+                "💡 Life Hack: Free water is available near the counter, but buying a Cold Coffee cures all sorrows."
+            ];
+            document.getElementById('panic-text').innerText = panicMessages[Math.floor(Math.random() * panicMessages.length)];
+            modal.classList.remove('hidden');
+        }
+
+        function closePanic() {
+            const modal = document.getElementById('panic-modal');
+            modal.classList.add('hidden');
+        }
+    </script>
 
 </body>
 </html>
